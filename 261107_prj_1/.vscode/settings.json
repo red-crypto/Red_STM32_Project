@@ -1,0 +1,4 @@
+{
+  "rust-analyzer.check.allTargets": false,
+  "serial-monitor.defaultBaud": "115200"
+}

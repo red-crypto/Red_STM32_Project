@@ -9,6 +9,8 @@
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "${env:USERPROFILE}/.cargo/bin/probe-rs.exe",
       "chip": "STM32F411RETx",
+      "connectUnderReset": true,
+      "speed": 1000,
       "flashingConfig": { "flashingEnabled": true, "haltAfterReset": true },
       "coreConfigs": [
         {

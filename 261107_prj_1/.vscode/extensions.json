@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "rust-lang.rust-analyzer",
-    "probe-rs.probe-rs-debugger"
+    "probe-rs.probe-rs-debugger",
+    "eclipse-cdt.serial-monitor"
   ]
 }

@@ -10,13 +10,18 @@ cortex-m-rt = "0.7"
 embassy-stm32 = { version = "0.6", features = ["stm32f411re", "time-driver-any", "defmt"] }
 embassy-executor = { version = "0.10", features = ["platform-cortex-m", "executor-thread"] }
 embassy-time = "0.5"
+embassy-futures = "0.1"
+embedded-io-async = "0.7"
 defmt = "1"
-defmt-rtt = "1"
+defmt-rtt = { version = "1", features = ["disable-blocking-mode"] }
 panic-probe = { version = "1", features = ["print-defmt"] }
 
 [profile.dev]
 debug = 2
 opt-level = 0
+
+[profile.dev.package."*"]
+opt-level = 2
 
 [profile.release]
 debug = 2
