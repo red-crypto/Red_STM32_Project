@@ -13,6 +13,7 @@
       "coreConfigs": [
         {
           "coreIndex": 0,
+          "rttEnabled": true,
           "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/stm32f411re-firmware"
         }
       ]

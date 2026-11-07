@@ -1,13 +1,25 @@
 #![no_std]
 #![no_main]
 
-use cortex_m_rt::entry;
-use panic_halt as _;
+use embassy_executor::Spawner;
+use embassy_stm32::gpio::{Level, Output, Speed};
+use embassy_time::Timer;
+use {defmt_rtt as _, panic_probe as _};
 
-#[entry]
-fn main() -> ! {
-    // 보드별 핀을 가정하지 않는 디버깅 확인용 루프입니다.
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    let peripherals = embassy_stm32::init(Default::default());
+    // NUCLEO-F411RE의 사용자 LED LD2는 PA5에 연결되어 있습니다.
+    let mut led = Output::new(peripherals.PA5, Level::Low, Speed::Low);
+
+    defmt::info!("NUCLEO-F411RE LED 예제 시작");
     loop {
-        cortex_m::asm::nop();
+        led.set_high();
+        defmt::info!("LD2 켜짐");
+        Timer::after_secs(1).await;
+
+        led.set_low();
+        defmt::info!("LD2 꺼짐");
+        Timer::after_secs(1).await;
     }
 }
