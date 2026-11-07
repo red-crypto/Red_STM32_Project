@@ -6,6 +6,7 @@ VS Code에서 F5를 누르면 Rust 펌웨어를 빌드하고 ST-LINK를 통해 �
 
 - STM32F411RE와 ST-LINK를 연결합니다. NUCLEO 보드의 내장 ST-LINK를 사용하는 경우 디버거 쪽 USB 포트에 데이터 케이블을 연결합니다. 별도 디버거라면 SWDIO, SWCLK, GND, 타깃 전압 기준 및 필요 시 NRST를 연결하고 보드에 전원을 공급합니다.
 - Rust와 `thumbv7em-none-eabihf` 타깃, `probe-rs` 도구, VS Code의 **rust-analyzer** 및 **probe-rs debugger** 확장이 필요합니다. 이 프로젝트 설정은 Cargo와 probe-rs가 `%USERPROFILE%\.cargo\bin`에 설치된 것을 기준으로 합니다.
+- 이 PC에는 Rust GNU Windows 도구 모음과 기존 `C:\mingw64\bin` 링커를 사용하도록 설치했습니다. 새 PATH를 적용하려면 실행 중인 VS Code 창을 모두 종료하고 다시 실행합니다.
 - VS Code에서 상위 폴더가 아닌 이 `261107_prj_1` 폴더 자체를 열어 주세요. 처음 열 때 권장 확장을 설치하고 VS Code를 재시작합니다.
 
 ## 실행 및 확인

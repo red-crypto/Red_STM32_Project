@@ -9,7 +9,7 @@
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "${env:USERPROFILE}/.cargo/bin/probe-rs.exe",
       "chip": "STM32F411RETx",
-      "flashingConfig": { "flashingEnabled": true },
+      "flashingConfig": { "flashingEnabled": true, "haltAfterReset": true },
       "coreConfigs": [
         {
           "coreIndex": 0,
