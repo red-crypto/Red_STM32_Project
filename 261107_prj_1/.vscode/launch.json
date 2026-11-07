@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "STM32F411RE: 빌드, 플래시, 디버그",
+      "type": "probe-rs-debug",
+      "request": "launch",
+      "preLaunchTask": "cargo build (STM32F411RE)",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${env:USERPROFILE}/.cargo/bin/probe-rs.exe",
+      "chip": "STM32F411RETx",
+      "flashingConfig": { "flashingEnabled": true },
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/stm32f411re-firmware"
+        }
+      ]
+    }
+  ]
+}

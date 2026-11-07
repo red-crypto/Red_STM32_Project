@@ -1,0 +1,17 @@
+[package]
+name = "stm32f411re-firmware"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+panic-halt = "1"
+
+[profile.dev]
+debug = 2
+opt-level = 0
+
+[profile.release]
+debug = 2

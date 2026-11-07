@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cargo build (STM32F411RE)",
+      "type": "process",
+      "command": "${env:USERPROFILE}/.cargo/bin/cargo.exe",
+      "args": ["build"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$rustc"],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}
